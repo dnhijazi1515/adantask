@@ -6,6 +6,7 @@
         android:title="Home"
         />
     <item
+
         android:id="@+id/dash"
         android:orderInCategory="200"
         android:title="Dash"

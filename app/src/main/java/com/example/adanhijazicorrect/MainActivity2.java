@@ -37,9 +37,9 @@ public class MainActivity2 extends AppCompatActivity {
                     editor.putString("password", password);
                     editor.apply();
 
-                    Toast.makeText(MainActivity2.this, "تم التسجيل بنجاح ✅", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity2.this, "تم التسجيل بنجاح", Toast.LENGTH_SHORT).show();
                 } else {
-                    Toast.makeText(MainActivity2.this, "الرجاء إدخال البريد وكلمة المرور", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity2.this, "الرجاء إدخال اسم المستخدم وكلمة المرور", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -54,20 +54,19 @@ public class MainActivity2 extends AppCompatActivity {
                 String inputPassword = pass.getText().toString().trim();
                 if (savedName != null && savedPass != null) {
                     if (savedName.equals(inputName) && savedPass.equals(inputPassword)) {
-                        Toast.makeText(MainActivity2.this, "تسجيل الدخول ناجح 🎉", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity2.this, "تم تسجيل الدخول بنجاح ", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(MainActivity2.this, MainActivity3.class);
                         intent.putExtra("loggedUser", savedName);
                         startActivity(intent);
                         finish();
                     } else {
-                        Toast.makeText(MainActivity2.this, "الإيميل أو كلمة المرور غير صحيحة", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity2.this, "اسم المستخدم أو كلمة المرور غير صحيحة", Toast.LENGTH_SHORT).show();
                     }
                 } else {
                     Toast.makeText(MainActivity2.this, "لا يوجد حساب مسجل، الرجاء التسجيل أولاً", Toast.LENGTH_SHORT).show();
                 }
             }
         });
-
         BottomNavigationView btnav = findViewById(R.id.btnav);
         btnav.setOnItemSelectedListener(item -> {
             int id = item.getItemId();

@@ -48,6 +48,7 @@ public class MainActivity3 extends AppCompatActivity {
             return false;
         });
     }
+
     public void out(View view){
         name.setText("Hello user");
     }
